@@ -1,0 +1,12 @@
+{
+  "name": "bank-webhook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@repo/db": "*",
+    "@types/express": "^5.0.1",
+    "esbuild": "^0.25.1",
+    "express": "^4.21.2"
+  }
+}
