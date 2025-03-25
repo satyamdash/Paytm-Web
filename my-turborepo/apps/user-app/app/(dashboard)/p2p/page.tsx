@@ -23,7 +23,13 @@ export default function P2P() {
                         <div className="flex justify-center pt-4">
                             <Button onClick={async () => {
                                 console.log("Sending money");
-                                await sendMoney(number, amount)
+                                try {
+                                    await sendMoney(number, amount*100)
+                                    alert("Money sent successfully");
+                                } catch (error) {
+                                    alert(error);
+                                }
+                                
                             }}>
                             Send
                             </Button>
