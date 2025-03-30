@@ -1,0 +1,21 @@
+FROM node:20-alpine
+
+RUN npm install -g yarn
+
+WORKDIR /usr/src/app
+
+COPY ./packages ./packages
+COPY ./package.json ./package.json
+COPY ./yarn.lock ./yarn.lock
+COPY ./turbo.json ./turbo.json
+
+COPY ./apps/bank-webhook/ ./apps/bank-webhook/
+
+RUN yarn install
+RUN yarn db:generate
+RUN yarn turbo run build --filter=apps/bank-webhook
+
+EXPOSE 3003
+
+CMD ["yarn", "run","start:bank-webhook"]
+
