@@ -7,7 +7,7 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "db:generate": "cd packages/db && yarn generate && cd ../..",
+    "db:generate": "cd packages/db && yarn prisma generate && cd ../..",
     "start:bank-webhook": "cd apps/bank-webhook && yarn run start",
     "start:user-app": "cd apps/user-app && yarn run start"
   },

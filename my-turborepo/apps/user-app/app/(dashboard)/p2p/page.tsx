@@ -1,5 +1,5 @@
 "use client"
-import { TextInput } from "@repo/ui/textinput";
+import { TextInput } from "@repo/ui";
 import { Button } from "@repo/ui/button";
 import { useState } from "react";
 import { Card } from "@repo/ui/card";
