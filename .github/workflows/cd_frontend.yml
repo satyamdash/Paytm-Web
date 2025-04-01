@@ -24,6 +24,6 @@ jobs:
           context: .
           file: docker/Dockerfile.frontend
           build-args:
-            - DATABASE_URL=${{ secrets.DATABASE_URL }}
-          push: false
+            DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          push: true
           tags: ghcr.io/${{ github.repository_owner }}/frontend:latest

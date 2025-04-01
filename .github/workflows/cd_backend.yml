@@ -22,5 +22,5 @@ jobs:
         with:
           context: .
           file: docker/Dockerfile.backend
-          push: false
-          tags: ghcr.io/${{ github.repository_owner }}/bank-webhook:latest
+          push: true
+          tags: sattu18/paytm:${{ github.sha }}
