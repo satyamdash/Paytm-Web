@@ -3,7 +3,7 @@ version: '3.8'
 services:
   bank-webhook:
     build:
-      context: ./my-turborepo
+      context: .
       dockerfile: ./docker/Dockerfile.backend
     environment: 
       - DATABASE_URL=postgresql://postgres:mysecretpassword@postgres:5432/postgres
@@ -14,7 +14,7 @@ services:
       
   user-app:
     build:
-      context: ./my-turborepo
+      context: .
       dockerfile: ./docker/Dockerfile.frontend
     environment: 
       - DATABASE_URL=postgresql://postgres:mysecretpassword@postgres:5432/postgres
